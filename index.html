@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibe Vault · 媒体档案</title>
+  <style>
+    /* ———— 赛博复古风格 ———— */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0b0b0e;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Courier New', monospace;
+      padding: 20px;
+    }
+    .vault {
+      max-width: 680px;
+      width: 100%;
+      background: #12121a;
+      border: 2px solid #f0a;
+      box-shadow: 0 0 30px rgba(255, 0, 170, 0.25), inset 0 0 30px rgba(255, 0, 170, 0.05);
+      padding: 30px 28px;
+      border-radius: 18px;
+      transition: 0.3s;
+    }
+    .vault:hover { box-shadow: 0 0 60px rgba(255, 0, 170, 0.4); }
+
+    .glitch {
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #f0f;
+      text-shadow: 3px 3px 0 #0ff, -3px -3px 0 #f0f;
+      margin-bottom: 6px;
+    }
+    .sub {
+      color: #aaf;
+      font-size: 0.9rem;
+      border-left: 3px solid #f0a;
+      padding-left: 14px;
+      margin-bottom: 28px;
+      opacity: 0.8;
+    }
+
+    /* ———— 媒体网格 ———— */
+    .media-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin: 24px 0 28px;
+    }
+    .media-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #1a1a26;
+      padding: 14px 20px;
+      border-radius: 40px;
+      border: 1px solid #2a2a3e;
+      transition: 0.2s;
+      text-decoration: none;
+      color: #ccc;
+    }
+    .media-item:hover {
+      background: #25253a;
+      border-color: #f0a;
+      transform: translateX(8px);
+      box-shadow: 0 0 20px rgba(255, 0, 170, 0.15);
+    }
+    .media-item .icon { font-size: 1.8rem; width: 40px; text-align: center; }
+    .media-item .info { flex: 1; }
+    .media-item .name { font-weight: 600; color: #eee; }
+    .media-item .desc { font-size: 0.75rem; opacity: 0.5; letter-spacing: 1px; }
+
+    /* ———— 状态条 ———— */
+    .status-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #556;
+      border-top: 1px solid #1f1f2e;
+      padding-top: 18px;
+      margin-top: 8px;
+    }
+    .status-bar span { color: #0fa; }
+
+    /* 响应式 */
+    @media (max-width: 480px) {
+      .glitch { font-size: 1.8rem; }
+      .media-item { padding: 12px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="vault">
+  <!-- 标题区 -->
+  <div class="glitch">✦ VIBE VAULT</div>
+  <div class="sub">// 媒体档案 · 数字身份</div>
+
+  <!-- 媒体链接列表（替换成你的） -->
+  <div class="media-grid">
+    <a href="#" class="media-item">
+      <span class="icon">🎧</span>
+      <span class="info">
+        <div class="name">Spotify</div>
+        <div class="desc">正在听 · 蒸汽波电台</div>
+      </span>
+      <span style="color:#0fa; font-size:0.8rem;">● LIVE</span>
+    </a>
+
+    <a href="#" class="media-item">
+      <span class="icon">📷</span>
+      <span class="info">
+        <div class="name">Instagram</div>
+        <div class="desc">胶片 / 城市夜景</div>
+      </span>
+    </a>
+
+    <a href="#" class="media-item">
+      <span class="icon">🐦</span>
+      <span class="info">
+        <div class="name">X (Twitter)</div>
+        <div class="desc">碎碎念 · 科技与艺术</div>
+      </span>
+    </a>
+
+    <a href="#" class="media-item">
+      <span class="icon">💻</span>
+      <span class="info">
+        <div class="name">GitHub</div>
+        <div class="desc">开源 · 项目实验</div>
+      </span>
+      <span style="color:#f0a; font-size:0.7rem;">✦ 8 repos</span>
+    </a>
+
+    <a href="#" class="media-item">
+      <span class="icon">📺</span>
+      <span class="info">
+        <div class="name">YouTube</div>
+        <div class="desc">混剪 / 氛围音画</div>
+      </span>
+    </a>
+  </div>
+
+  <!-- 底部状态 -->
+  <div class="status-bar">
+    <span>⚡ 最后更新: 2026.07.08</span>
+    <span>📼 磁带 · 在线</span>
+  </div>
+</div>
+
+</body>
+</html>
